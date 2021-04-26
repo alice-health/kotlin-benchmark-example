@@ -1,6 +1,14 @@
 # Compiled class file
 *.class
 
+# Gradle build output directory
+build
+
+# Gradle project-specific cache directory
+.gradle*
+
+.idea
+
 # Log file
 *.log
 
