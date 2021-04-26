@@ -9,7 +9,6 @@ plugins {
 group = "br.com.alice.benchmarks"
 version "0.0.1"
 
-
 repositories {
     mavenCentral()
 }
@@ -41,9 +40,6 @@ jmhReport {
 }
 
 task("benchmarks", type = JavaExec::class) {
+    classpath = sourceSets.getByName("test").runtimeClasspath
     main = "br.com.alice.benchmarks.BenchmarksRunnerKt"
-}
-
-tasks.test {
-    useJUnit()
 }
